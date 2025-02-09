@@ -8,23 +8,23 @@ import Link from "next/link";
 const HeroSection = () => {
   const imageRef = useRef(null);
 
-  useEffect(() => {
-    const imageElement = imageRef.current;
+  // useEffect(() => {
+  //   const imageElement = imageRef.current;
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const scrollThreshold = 100;
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+  //     const scrollThreshold = 100;
 
-      if (scrollPosition > scrollThreshold) {
-        imageElement.classList.add("scrolled");
-      } else {
-        imageElement.classList.remove("scrolled");
-      }
-    };
+  //     if (scrollPosition > scrollThreshold) {
+  //       imageElement.classList.add("scrolled");
+  //     } else {
+  //       imageElement.classList.remove("scrolled");
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <section className="w-full pt-36 md:pt-48 pb-10">
@@ -46,20 +46,23 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/roadsidecoder">
+          {/* <Link href="https://www.youtube.com/roadsidecoder">
             <Button size="lg" variant="outline" className="px-8">
               Watch Demo
             </Button>
-          </Link>
+          </Link> */}
         </div>
         <div className="hero-image-wrapper mt-5 md:mt-0">
-          <div ref={imageRef} className="hero-image">
+          <div
+          // ref={imageRef}
+          // className="hero-image"
+          >
             <Image
               src="/banner.jpeg"
               width={1280}
               height={720}
               alt="Dashboard Preview"
-              className="rounded-lg shadow-2xl border mx-auto"
+              className="rounded-lg shadow-2xl  mx-auto"
               priority
             />
           </div>

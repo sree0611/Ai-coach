@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <head>
           <link rel="icon" href="/logo.png" sizes="any" />
         </head>
-        <body className={`${inter.className}`}>
+        <body className={`${inter.className} container`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -35,9 +35,9 @@ export default function RootLayout({ children }) {
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
 
-            <footer className="bg-muted/50 py-12">
+            <footer className=" py-12">
               <div className="container mx-auto px-4 text-center text-gray-200">
-                <p>Made with 💗 by RoadsideCoder</p>
+                <p>Made with Google Gemini AI</p>
               </div>
             </footer>
           </ThemeProvider>
